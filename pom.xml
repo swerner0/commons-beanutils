@@ -24,7 +24,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>commons-beanutils</groupId>
   <artifactId>commons-beanutils</artifactId>
-  <version>1.9.3</version>
+  <version>1.9.3-jenkins-fix</version>
   <name>Apache Commons BeanUtils</name>
 
   <inceptionYear>2000</inceptionYear>
@@ -32,8 +32,8 @@
   <url>https://commons.apache.org/proper/commons-beanutils/</url>
 
   <properties>
-      <maven.compiler.source>1.6</maven.compiler.source>
-      <maven.compiler.target>1.6</maven.compiler.target>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
       <commons.componentid>beanutils</commons.componentid>
       <commons.release.version>1.9.3</commons.release.version>
       <commons.jira.id>BEANUTILS</commons.jira.id>

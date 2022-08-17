@@ -27,7 +27,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import java.util.WeakHashMap;
 
 
 /**
@@ -132,7 +131,8 @@ public class WrapDynaClass implements DynaClass {
         new ContextClassLoaderLocal<Map<CacheKey, WrapDynaClass>>() {
             @Override
             protected Map<CacheKey, WrapDynaClass> initialValue() {
-                return new WeakHashMap<CacheKey, WrapDynaClass>();
+                // Or Collections.synchronizedMap(new WeakHashMap()); // less concurrent
+                return new ConcurrentReferenceHashMap<>(ConcurrentReferenceHashMap.ReferenceType.WEAK);
         }
     };
 
